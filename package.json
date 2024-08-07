@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build:marketing": "cd marketing-ui-v1.0.0/ && npm install && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build": "npm run build:marketing",
+    "index": "indexifier ./ --extensions .html,.htm",
+    "serve": "serve ."
+  },
+  "devDependencies": {
+    "indexifier": "^3.3.0",
+    "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "glob": "^11.0.0"
+  }
+}
