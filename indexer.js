@@ -15,8 +15,8 @@ function generateIndexHtml(dirPath) {
     const links = items.map(item => {
         const itemPath = path.join(dirPath, item);
         const isDirectory = fs.statSync(itemPath).isDirectory();
-        const href = isDirectory ? `${item}/index.html` : path.join(dirPath, item);
-        return `<li><a href="/${href}">${item}</a></li>`;
+        const href = isDirectory ? `${item}/` : `./${item}`;
+        return `<li><a href="${href}">${item}</a></li>`;
     }).join('\n');
 
     const htmlContent = `
