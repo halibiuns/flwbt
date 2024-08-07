@@ -1,8 +1,9 @@
 {
   "scripts": {
+    "build:admin": "cd admin-dashboard-1.1.1/ && npm install && npm run build",
     "build:marketing": "cd marketing-ui-v1.0.0/ && npm install && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
     "build:publisher": "cd publisher-ui-blocks-v1.0.0/ && npm install && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "build": "npm run build:marketing && npm run build:publisher",
+    "build": "npm run build:admin && npm run build:marketing && npm run build:publisher",
     "indexer": "node indexer.js",
     "serve": "serve ."
   },
