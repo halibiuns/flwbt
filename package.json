@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build:marketing": "cd marketing-ui-v1.0.0/ && npm install && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "build": "npm run build:marketing",
+    "build:publisher": "cd publisher-ui-blocks-v1.0.0/ && npm install && npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build": "npm run build:marketing && npm run build:publisher",
     "indexer": "node indexer.js",
     "serve": "serve ."
   },
